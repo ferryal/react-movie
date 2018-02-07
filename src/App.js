@@ -12,7 +12,6 @@ class App extends Component {
         <HeaderMovie />
         <ContentMovie />
         <FooterMovie />
-
       </div>
         );
   }

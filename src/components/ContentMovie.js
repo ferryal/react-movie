@@ -14,10 +14,13 @@ export default class content extends Component {
             <div style={{ minHeight: 500 }}>
               <div className="App">
                 <CaroMovie
-                  carouselA="./images/carousel5.jpg"
-                  carouselB="./images/carousel6.jpg"
-                  carouselC="./images/carousel7.jpg"
+                  carouselA="./images/carousel7.jpg"
+                  carouselB="./images/carousel2.jpg"
+                  carouselC="./images/carousel1.jpg"
                   carouselD="./images/carousel8.jpg"
+                  carouselE="./images/carousel6.jpg"
+                  carouselF="./images/carousel5.jpg"
+
                 />
                 <Button type="primary">Movies</Button>
               </div>
