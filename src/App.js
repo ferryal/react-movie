@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
 import './App.css';
-import CaroMovie from './components/CaroMovie'
-
+import HeaderMovie from './components/HeaderMovie'
+import ContentMovie from './components/ContentMovie'
+import FooterMovie from './components/FooterMovie'
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <CaroMovie
-          carouselA="./images/carousel5.jpg"
-          carouselB="./images/carousel6.jpg"
-          carouselC="./images/carousel7.jpg"
-          carouselD="./images/carousel8.jpg"
-        />
-        <Button type="primary">Movies</Button>
+      <div>
+        <HeaderMovie />
+        <ContentMovie />
+        <FooterMovie />
 
       </div>
-    );
+        );
   }
 }
 
