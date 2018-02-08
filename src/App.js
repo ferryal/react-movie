@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import HeaderMovie from './components/HeaderMovie'
-import ContentMovie from './components/ContentMovie'
 import FooterMovie from './components/FooterMovie'
+
 
 
 class App extends Component {
@@ -10,7 +10,6 @@ class App extends Component {
     return (
       <div>
         <HeaderMovie />
-        <ContentMovie />
         <FooterMovie />
       </div>
         );

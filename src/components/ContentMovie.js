@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import {Layout, Button} from 'antd'
+import {Layout} from 'antd'
 import CaroMovie from './CaroMovie'
 import Load from './Load'
+import CardMovie from './CardMovie'
 
 export default class content extends Component {
   render() {
@@ -20,12 +21,12 @@ export default class content extends Component {
                   carouselD="./images/carousel8.jpg"
                   carouselE="./images/carousel6.jpg"
                   carouselF="./images/carousel5.jpg"
-
                 />
-                <Button type="primary">Movies</Button>
               </div>
               <div>
                 <Load/>
+                <CardMovie
+                />
               </div>
             </div>
           </Content>

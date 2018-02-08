@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {Layout} from 'antd'
+import {Layout, Icon} from 'antd'
+import '../App.css'
 
 export default class footer extends Component {
   render() {
@@ -8,7 +9,12 @@ export default class footer extends Component {
       <div>
         <Layout>
           <Footer style={{ textAlign: 'center' }}>
-            Ant Design ©2016 Created by Ant UED
+            Made by <Icon type="heart-o" /> from here.
+            <div>
+              <Icon type="github" style={{ fontSize: 16, color: '#696969', paddingTop:10, paddingRight:10 }}/>
+              <Icon type="twitter" style={{ fontSize: 16, color: '#08c', paddingTop:10, paddingRight:10 }}/>
+              <Icon type="linkedin" style={{ fontSize: 16, color: '#08c', paddingTop:10, paddingRight:10 }}/>
+            </div>
           </Footer>
         </Layout>
       </div>

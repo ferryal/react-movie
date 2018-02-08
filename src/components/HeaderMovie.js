@@ -1,24 +1,16 @@
 import React, {Component} from 'react'
-import {Layout, Menu} from 'antd'
+import {Tabs } from 'antd'
+import ContentMovie from './ContentMovie'
 
 export default class Head extends Component {
   render() {
-    const {Header} = Layout
+    const TabPane = Tabs.TabPane;
     return (
       <div>
-        <Layout>
-          <Header style={{ position: 'fixed', width:'100%'}}>
-            <Menu
-              theme="dark"
-              mode="horizontal"
-              defaultSelectedKeys={['2']}
-              style={{ lineHeight: '30px' }}
-            >
-              <Menu.Item key="1">Home</Menu.Item>
-              <Menu.Item key="2">Search</Menu.Item>
-            </Menu>
-          </Header>
-        </Layout>
+        <Tabs defaultActiveKey="1">
+          <TabPane tab="Home" key="1"><ContentMovie /></TabPane>
+          <TabPane tab="List Movie" key="2">Content of Tab Pane 2</TabPane>
+        </Tabs>
       </div>
     );
 
