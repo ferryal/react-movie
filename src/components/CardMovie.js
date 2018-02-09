@@ -1,58 +1,79 @@
-import React from 'react'
-import { Card, Icon, Grid} from 'semantic-ui-react'
+import React, {Component} from 'react'
+import { Card, Grid, Image} from 'semantic-ui-react'
 import DATA from "../data/DATA"
+import {Icon} from 'antd'
+import axios from 'axios'
 
 
 
 const listdata =() => (
     <div>
-      {DATA.map((data) => {
-        return (
-          <div>
-            <Grid centered columns={5} padded>
-              <Grid.Row>
-                <Grid.Column>
-                  <img src={data.image} alt={data.image}/>
-                  <Card.Content>
-                    <Card.Header>
-                      {data.title}
-                    </Card.Header>
-                    <Card.Description>
-                      <a>
-                        <Icon name='info circle' className="info"/>
-                        {data.title}
-                      </a>
-                    </Card.Description>
+      <Grid centered columns={5} padded>
+        {/* <Grid.Row> */}
+        {DATA.map((data) => {
+          return (
 
-                    <Card.Description>
-                      <a>
-                        <Icon name='info circle' className="info"/>
-                        {data.genre}
-                      </a>
-                    </Card.Description>
+            <Grid.Column>
+              <Card>
+                <div className="img-poster">
+                  <Image src={data.image} alt={data.image}/>
 
-                    <Card.Description>
-                      <a>
-                        <Icon name='info circle' className="info"/>
-                        {data.rating}
-                      </a>
-                    </Card.Description>
-                    <Card.Description>
-                      <a>
-                        <Icon name='info circle' className="info"/>
-                        {data.desc}
-                      </a>
-                    </Card.Description>
-                  </Card.Content>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </div>
+                </div>
 
-        );
-      }
-      )}
+                <Card.Content>
+                  <Card.Header>
+                    {data.title}
+                  </Card.Header>
+                  <Card.Description>
+                    <Icon type="aliwangwang-o" />{data.genre}
+                  </Card.Description>
+
+                  <Card.Description>
+                    <Icon type="star-o" />
+                    {data.rating}
+
+                  </Card.Description>
+                  <Card.Description>
+                    <Icon type="info-circle-o" /> {data.desc}
+
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+
+            </Grid.Column>
+
+          );
+        }
+        )}
+        {/* </Grid.Row>
+        */}
+      </Grid>
     </div>
     )
 
   export default listdata
+
+
+//using Axios
+// export default class upcoming extends Component {
+//
+//     state ={
+//       movies: []
+//     }
+//     componentDidMount() {
+//       axios.get(`https://api.opendota.com/api/proPlayers`)
+//         .then(res => {
+//           const movies = res.data;
+//           this.setState({movies})
+//         })
+//     }
+//     render(){
+//       return (
+//         <ul>{this.state.movies.map(movie =>
+//           <li>{movie.name} {movie.team_name}</li>
+//
+//         )}</ul>
+//       );
+//     }
+//
+// }

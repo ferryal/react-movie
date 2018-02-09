@@ -40,3 +40,8 @@
 .ant-carousel .slick-slide img {
   color: #fff;
 }
+
+.wrapper-content {
+  display: flex !important;
+  justify-content: space-between;
+}

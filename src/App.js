@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import HeaderMovie from './components/HeaderMovie'
 import FooterMovie from './components/FooterMovie'
-
+import CardMovie from './components/CardMovie'
 
 
 class App extends Component {
@@ -11,6 +11,8 @@ class App extends Component {
       <div>
         <HeaderMovie />
         <FooterMovie />
+        <CardMovie />
+
       </div>
         );
   }
